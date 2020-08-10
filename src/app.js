@@ -79,7 +79,8 @@ app.get('/weather', (req,res) => {
                 temperature,
                 feelsLikeTemp,
                 tempDescription,
-                forecast
+                forecast,
+                place
             })
         })
     })

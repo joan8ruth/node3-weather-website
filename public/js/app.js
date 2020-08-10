@@ -25,6 +25,7 @@ fetch('http://api.weatherstack.com/current?access_key=92f2b65a0b6f52570ded367b58
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
 const forecast = document.querySelector('.forecast')
+const place = document.querySelector('.place')
 
 weatherForm.addEventListener('submit', (e) => {
 
@@ -33,6 +34,7 @@ weatherForm.addEventListener('submit', (e) => {
     const location = search.value
     console.log(location)
     forecast.textContent = 'Loading...'
+    place.textContent = ''
 
     fetch('/weather?address=' + location).then((response) =>{
 
@@ -44,6 +46,7 @@ weatherForm.addEventListener('submit', (e) => {
         }else{
            
             forecast.textContent = data.forecast
+            place.textContent = data.place
         }
 
     })

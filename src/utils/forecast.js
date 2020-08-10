@@ -17,7 +17,7 @@ const forecast = (lat,long,callback) => {
                 temperature:body.current.temperature,
                 feelsLikeTemp :body.current.feelslike,
                 tempDescription:body.current.weather_descriptions[0],
-                forecast:'The temp is '+body.current.temperature+' feels like '+body.current.feelslike+'. It is '+body.current.weather_descriptions[0]+'.'
+                forecast:'The temp is '+body.current.temperature+' feels like '+body.current.feelslike+'. It is '+body.current.weather_descriptions[0]+'.'+' The humidity is '+body.current.humidity+'%.'
             })
         }
     })
